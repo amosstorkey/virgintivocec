@@ -42,6 +42,7 @@ Download virgintivocec and the copy of libcec that comes with it. Note the libce
 
 Hard edit the IP address for the virgin box in main.cpp (default is 192.168.0.16  - told you it was hacky).
 Hard edit what you want your virgin box to be labelled as in main.cpp (default is "Virgin Tivo")
+Hard edit the CEC Physical address for the Virgin Box.
 
 
 Do you use kodi? Probably. If so go in to kodi, settings, input devices, peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how? I used trial and error).
