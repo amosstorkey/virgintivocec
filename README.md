@@ -36,20 +36,26 @@ Sometimes if you reboot the pi, the virign box no longer provides a telly signal
 
 #Installation:
 Ensure the pi/pi2, and virgin box are networked and the virgin box is on a fixed or reserved IP address, and you know it (the IP address that is).
+
 Add the Pulse eight box into the hdmi line from the virgin box to wherever it goes to (TV, receiver whatever)
+
 Plug the USB from the Pulse Eight box into a sub port on your paspberry pi or pi 2.
+
 Download virgintivocec and the copy of libcec that comes with it. Note the libcec has had a version.h added (instead of a version.h.in) to enable its use with commonorgarden make.
 
 Hard edit the IP address for the virgin box in main.cpp (default is 192.168.0.16  - told you it was hacky).
+
 Hard edit what you want your virgin box to be labelled as in main.cpp (default is "Virgin Tivo")
+
 Hard edit the CEC address for the Virgin Box (default HDMI port one on the receiver connected to the hdmi port one on the TV. I.e. Physical address 1100. See https://www.mythtv.org/wiki/HDMI-CEC for a bit more description on this.).
 
 
 Do you use kodi? Probably. If so go in to kodi, settings, input devices, peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how? I used trial and error).
 
 Now link libcec
-cd virgintivocec-master
-ln -s ../libcec-libcec-3.0.0/include libcec
+
+    cd virgintivocec-master
+    ln -s ../libcec-libcec-3.0.0/include libcec
 
 Then compile and install it    
 
