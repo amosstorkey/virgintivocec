@@ -54,7 +54,7 @@ Do you use kodi? Probably. If so go in to kodi, settings, input devices, periphe
 
 Now link libcec
 
-    cd virgintivocec-master
+    cd packages/virgintivocec-master
     ln -s ../libcec-libcec-3.0.0/include libcec
 
 Then compile and install it    
