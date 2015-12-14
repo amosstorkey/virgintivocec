@@ -1,5 +1,7 @@
 # virgin tivo cec
 
+# Currently awaiting a fix and decision by OSMC: libcec was broken in the November 2015 release of libcec, and decisions regarding the fix have been stalled. Until that is sorted this code cannot be released.
+
 Use your Raspberry Pi to enable CEC Control of you Virgin Tivo box. (c) 2013 Amos Storkey, licenced under GPL2.
 
 For more background see https://github.com/mkulke/cecanyway
