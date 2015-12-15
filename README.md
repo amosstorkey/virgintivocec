@@ -14,8 +14,10 @@ Pulse Eight USB-CEC Adapter at 30 quid. About the same as you'd save on a cheapo
 
 2) Network connection to tivo box and Pi.
 
+3) TV. I have set this up for a Samsung Telly. CEC is not as standard as it ought to be so you might have to hack some codes for oher TVs. Note the (or my) Samsung remote does not have both a fast forward and a skip. I find the skip more useful, so have set the FF/RW buttons to do skip forward/back.
+
 # Use Cases
-Case 1) You use an osmc pi but have a virgin tivo box. But virgin is not CEC compatible and so your osmc is constantly grabbing attention from it. This adds a CEC capability to the TIVO so this no longer happens.
+Case 1) You use an osmc pi but have a virgin tivo box. But virgin is not CEC compatible and so your osmc is constantly grabbing attention from it when you turn on the TV, which is a real pain. This adds a CEC capability to the TIVO so this no longer happens.
 
 Case 2) You want to control the virgin box using the TV remote. But you can't, because virgin were cheapskates (just joking VM) and didn't include any CEC hardware on their tivo box. So you're stuffed...
 
