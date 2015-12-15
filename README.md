@@ -43,7 +43,10 @@ Add the Pulse eight box into the hdmi line from the virgin box to wherever it go
 
 Plug the USB from the Pulse Eight box into a sub port on your paspberry pi or pi 2.
 
-Download virgintivocec and the copy of libcec that comes with it. Note the libcec has had a version.h added (instead of a version.h.in) to enable its use with commonorgarden make.
+Download virgintivocec. Also install libcec using
+
+sudo apt-get update
+sudo apt-get install libcec2
 
 Hard edit the IP address for the virgin box in main.cpp (default is 192.168.0.16  - told you it was hacky).
 
@@ -51,15 +54,14 @@ Hard edit what you want your virgin box to be labelled as in main.cpp (default i
 
 Hard edit the CEC address for the Virgin Box (default HDMI port one on the receiver connected to the hdmi port one on the TV. I.e. Physical address 1100. See https://www.mythtv.org/wiki/HDMI-CEC for a bit more description on this.).
 
-
 Do you use kodi? Probably. If so go in to kodi, settings, input devices, peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how? I used trial and error).
 
 Now link libcec
 
     cd packages/virgintivocec-master
-    ln -s ../libcec-libcec-3.0.0/include libcec
+    ln -s ../libcec-libcec-2.1.4/include libcec
 
-Then compile and install it    
+Then compile and install ivirgintivocec   
 
     sudo apt-get upgrade
     sudo apt-get update
@@ -74,8 +76,6 @@ All being well that should kick off the virgintivocec service. A reboot of the p
 # Thanks
 The code is a rehack from cecanyway, licenced under GPL2. (C) 2013 Magnus Kulke. It also includes the version of libCEC appropriate for current OSMC (again under GPL2).
 
-I've built this for OSMC on a Pi2. Your milage may vary for other platforms. Older code may use earlier libCEC packages.
+I've built this for OSMC on a Pi2. Your milage may vary for other platforms.
 
-
-
-
+Works on OSMC November 2015 build.
