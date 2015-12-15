@@ -67,7 +67,7 @@ Now link libcec
     cd virgintivocec/virgintivocec-master
     ln -s ../libcec-libcec-2.1.4/include libcec
 
-Then compile and install ivirgintivocec   
+Then compile and install virgintivocec   
 
     sudo apt-get upgrade
     sudo apt-get update
