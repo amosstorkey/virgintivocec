@@ -80,7 +80,7 @@ Then compile and install virgintivocec
 All being well that should kick off the virgintivocec service. A reboot of the pi/pi2 and you should be away.
 
 # Thanks
-The code is a rehack from cecanyway, licenced under GPL2. (C) 2013 Magnus Kulke. It also includes the version of libCEC appropriate for current OSMC (again under GPL2).
+The code is a rehack from cecanyway, licenced under GPL2. (C) 2013 Magnus Kulke. 
 
 I've built this for OSMC on a Pi2. Your milage may vary for other platforms.
 
