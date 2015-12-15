@@ -31,7 +31,7 @@ TV receives remote signal. Pumps signal to Pulse Eight box, which sends it via U
 This code is the worst piece of hacky code ever. But it does achieve this goal (though no promises are made), and it works without any significant problems. I just don't have time to understand all the ins and outs of libCEC, or write proper general purpose code. After all controlling my tivo box via CEC is only worth so much, and I do actually have a life, so I am afraid hacking this together was as good as it was going to get. But I suspect it will still be useful to one or two ther people out there, so up it goes.
 
 #To use
-This assumes you are using osmc stable release (i.e. July to October++ 2015), which contains libcec3. Other versions may require edits for other versions of libcec. I've included libcec3.0.0 with the code, but you really only need the headers.
+This assumes you are using osmc stable release (currently November 2015 version only), which contains libcec separation. Other versions may require edits for other versions of libcec.
 
 #Known issue. 
 Sometimes if you reboot the pi, the virign box no longer provides a telly signal. It provides the menu items just no picture. Putting the telly into standby and out returns life to normality. I assume this is a problem wrt to some hdcp (yuck) handshake issue. Note the assumption is that you will be leaving the pi always-on. If you are worried about the minsicule half a watt the pi consumes destroying the planet, then you wouldn't be running a virgin tivo... There may be ways around this, but its not on my task list.
@@ -48,6 +48,14 @@ Download virgintivocec. Also install libcec using
 sudo apt-get update
 sudo apt-get install libcec2
 
+We also need the headers for the libcec 2.1.4. This is best downloaded into the virgintivocec directory from
+
+wget --no-check-certificate https://github.com/Pulse-Eight/libcec/archive/libcec-2.1.4.tar.gz
+
+and upacked using
+
+tar -xvf libcec-2.1.4.tar.gz
+
 Hard edit the IP address for the virgin box in main.cpp (default is 192.168.0.16  - told you it was hacky).
 
 Hard edit what you want your virgin box to be labelled as in main.cpp (default is "Virgin Tivo")
@@ -58,7 +66,7 @@ Do you use kodi? Probably. If so go in to kodi, settings, input devices, periphe
 
 Now link libcec
 
-    cd packages/virgintivocec-master
+    cd virgintivocec/virgintivocec-master
     ln -s ../libcec-libcec-2.1.4/include libcec
 
 Then compile and install ivirgintivocec   
