@@ -31,7 +31,7 @@ TV receives remote signal. Pumps signal to Pulse Eight box, which sends it via U
 This code is the worst piece of hacky code ever. But it does achieve this goal (though no promises are made), and it works without any significant problems. I just don't have time to understand all the ins and outs of libCEC, or write proper general purpose code. After all controlling my tivo box via CEC is only worth so much, and I do actually have a life, so I am afraid hacking this together was as good as it was going to get. But I suspect it will still be useful to one or two ther people out there, so up it goes.
 
 #To use
-This assumes you are using osmc stable release (currently November 2015 version only), which contains libcec separation. Other versions may require edits for other versions of libcec.
+This assumes you are using osmc stable release (currently a version later than November 2015), which contains libcec separation. Other versions may require edits for other versions of libcec.
 
 #Known issue. 
 Sometimes if you reboot the pi, the virign box no longer provides a telly signal. It provides the menu items just no picture. Putting the virgin box into standby and out returns life to normality. I assume this is a problem wrt to some hdcp (yuck) handshake issue. Note the assumption is that you will be leaving the pi always-on. If you are worried about the minsicule half a watt the pi consumes destroying the planet, then you wouldn't be running a virgin tivo... There may be ways around this, but its not on my task list.
