@@ -6,7 +6,7 @@ For more background see https://github.com/mkulke/cecanyway
 
 # Requires (hardware):
 
-0) Virgin Box and an always-on Raspberry Pi or Pi2 running OSMC.
+0) Virgin Box and an always-on Raspberry Pi or Pi2 running OSMC (other OS may well work but are untested).
 
 1) https://www.pulse-eight.com/
 
