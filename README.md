@@ -34,7 +34,7 @@ This code is the worst piece of hacky code ever. But it does achieve this goal (
 This assumes you are using osmc stable release (currently November 2015 version only), which contains libcec separation. Other versions may require edits for other versions of libcec.
 
 #Known issue. 
-Sometimes if you reboot the pi, the virign box no longer provides a telly signal. It provides the menu items just no picture. Putting the telly into standby and out returns life to normality. I assume this is a problem wrt to some hdcp (yuck) handshake issue. Note the assumption is that you will be leaving the pi always-on. If you are worried about the minsicule half a watt the pi consumes destroying the planet, then you wouldn't be running a virgin tivo... There may be ways around this, but its not on my task list.
+Sometimes if you reboot the pi, the virign box no longer provides a telly signal. It provides the menu items just no picture. Putting the virgin box into standby and out returns life to normality. I assume this is a problem wrt to some hdcp (yuck) handshake issue. Note the assumption is that you will be leaving the pi always-on. If you are worried about the minsicule half a watt the pi consumes destroying the planet, then you wouldn't be running a virgin tivo... There may be ways around this, but its not on my task list.
 
 #Installation:
 Ensure the pi/pi2, and virgin box are networked and the virgin box is on a fixed or reserved IP address, and you know it (the IP address that is).
