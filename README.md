@@ -41,7 +41,7 @@ Ensure the pi/pi2, and virgin box are networked and the virgin box is on a fixed
 
 Add the Pulse eight box into the hdmi line from the virgin box to wherever it goes to (TV, receiver whatever)
 
-Plug the USB from the Pulse Eight box into a sub port on your paspberry pi or pi 2.
+Plug the USB from the Pulse Eight box into a USB port on your paspberry pi or pi 2.
 
 Download virgintivocec. Also install libcec using
 
