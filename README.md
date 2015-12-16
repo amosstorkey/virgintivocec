@@ -45,16 +45,16 @@ Plug the USB from the Pulse Eight box into a USB port on your paspberry pi or pi
 
 Download virgintivocec. Also install libcec using
 
-sudo apt-get update
-sudo apt-get install libcec2
+    sudo apt-get update
+    sudo apt-get install libcec2
 
 We also need the headers for the libcec 2.1.4. This is best downloaded into the virgintivocec directory from
 
-wget --no-check-certificate https://github.com/Pulse-Eight/libcec/archive/libcec-2.1.4.tar.gz
+    wget --no-check-certificate https://github.com/Pulse-Eight/libcec/archive/libcec-2.1.4.tar.gz
 
 and upacked using
 
-tar -xvf libcec-2.1.4.tar.gz
+    tar -xvf libcec-2.1.4.tar.gz
 
 Hard edit the IP address for the virgin box in main.cpp (default is 192.168.0.16  - told you it was hacky).
 
