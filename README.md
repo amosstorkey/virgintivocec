@@ -36,7 +36,7 @@ This assumes you are using osmc stable release (currently a version later than N
 #Known issues. 
 Sometimes if you reboot the pi, the virign box no longer provides a telly signal. It provides the menu items just no picture. Putting the virgin box into standby and out returns life to normality. I assume this is a problem wrt to some hdcp (yuck) handshake issue. Note the assumption is that you will be leaving the pi always-on. If you are worried about the minsicule half a watt the pi consumes destroying the planet, then you wouldn't be running a virgin tivo... There may be ways around this, but its not on my task list.
 
-Again, on the reboot of the Pi, I have noticed it turn the receiver off when it shouldn't after the first selection of Kodi. Turing the receiver on manually fixes this permanently until the next pi reboot. Again I cant see why this is (it is dependent on libCEC version). I hope it all fixes itself if I can end up using a different libCEC in the future. In the meantime, a once in a moon button press is probably not beyond even the most lethargic couch potato.
+Again, on the reboot of the Pi, I have noticed it turn the receiver off when it shouldn't after the first selection of Kodi. Turning the receiver on manually fixes this permanently until the next pi reboot. Again I cant see why this is (it is dependent on libCEC version). I hope it all fixes itself if I can end up using a different libCEC in the future. In the meantime, a once in a moon button press is probably not beyond even the most lethargic couch potato.
 
 #Installation:
 Ensure the pi/pi2, and virgin box are networked and the virgin box is on a fixed or reserved IP address, and you know it (the IP address that is).
