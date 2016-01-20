@@ -88,3 +88,4 @@ I've built this for OSMC on a Pi2. Your milage may vary for other platforms.
 
 Works on OSMC November 2015 build.  
 Works on OSMC December 2015 build.
+Works on OSMC January 2016 build.  
