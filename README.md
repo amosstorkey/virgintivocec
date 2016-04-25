@@ -39,11 +39,11 @@ Sometimes if you reboot the pi, the virign box no longer provides a telly signal
 Again, on the reboot of the Pi, I have noticed it turn the receiver off when it shouldn't after the first selection of Kodi. Turning the receiver on manually fixes this permanently until the next pi reboot. Again I cant see why this is (it is dependent on libCEC version). I hope it all fixes itself if I can end up using a different libCEC in the future. In the meantime, a once in a moon button press is probably not beyond even the most lethargic couch potato.
 
 #Installation:
-Ensure the pi/pi2, and virgin box are networked and the virgin box is on a fixed or reserved IP address, and you know it (the IP address that is).
+Ensure the pi/pi2/pi3, and virgin box are networked and the virgin box is on a fixed or reserved IP address, and you know it (the IP address that is).
 
 Add the Pulse eight box into the hdmi line from the virgin box to wherever it goes to (TV, receiver whatever)
 
-Plug the USB from the Pulse Eight box into a USB port on your paspberry pi or pi 2.
+Plug the USB from the Pulse Eight box into a USB port on your paspberry pi, pi2 or pi3.
 
 Download virgintivocec. Also install libcec using
 
@@ -64,7 +64,7 @@ Hard edit what you want your virgin box to be labelled as in main.cpp (default i
 
 Hard edit the CEC address for the Virgin Box (default HDMI port one on the receiver connected to the hdmi port one on the TV. I.e. Physical address 1100. See https://www.mythtv.org/wiki/HDMI-CEC for a bit more description on this.).
 
-Do you use kodi? Probably. If so go in to kodi, settings, input devices, peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how? I used trial and error).
+Do you use/enable kodi on the pi? Probably. If so go in to kodi, settings, input devices, peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how? I used trial and error).
 
 Now link libcec
 
@@ -81,7 +81,7 @@ Then compile and install virgintivocec
     sudo update-rc.d virgintivocec defaults
     sudo service virgintivocec start
 
-All being well that should kick off the virgintivocec service. A reboot of the pi/pi2 and you should be away.
+All being well that should kick off the virgintivocec service. A reboot of the pi/pi2/pi3 and you should be away.
 
 # Thanks
 The code is a rehack from cecanyway, licenced under GPL2. (C) 2013 Magnus Kulke. 
