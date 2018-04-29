@@ -88,4 +88,4 @@ The code is a rehack from cecanyway, licenced under GPL2. (C) 2013 Magnus Kulke.
 
 I've built this originally for OSMC on a Pi2. Now (April 2016) testing for OSMC on a Pi3. Your mileage may vary for other platforms.
 
-Tested and works on OSMC November 2015 build through to July 2017 build.
+Tested and works on OSMC November 2015 build through to March 2018 build.
