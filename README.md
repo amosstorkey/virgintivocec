@@ -27,18 +27,18 @@ If you have a Pi kicking around and are willing to spend out on the Pulse Eight 
 
 TV receives remote signal. Pumps signal to Pulse Eight box, which sends it via USB to PI which decodes that input to port control signals for the tivo and sends it to the tivo over the network, which then responds to the keypress.
 
-#Caveats
+# Caveats
 This code is the worst piece of hacky code ever. But it does achieve this goal (though no promises are made), and it works without any significant problems. I just don't have time to understand all the ins and outs of libCEC, or write proper general purpose code. After all controlling my tivo box via CEC is only worth so much, and I do actually have a life, so I am afraid hacking this together was as good as it was going to get. But I suspect it will still be useful to one or two ther people out there, so up it goes.
 
-#To use
+# To use
 This assumes you are using osmc stable release (currently a version later than November 2015), which contains libcec separation. Other versions may require edits for other versions of libcec.
 
-#Known issues. 
+# Known issues. 
 Sometimes if you reboot the pi, the virign box no longer provides a telly signal. It provides the menu items just no picture. Putting the virgin box into standby and out returns life to normality. I assume this is a problem wrt to some hdcp (yuck) handshake issue. Note the assumption is that you will be leaving the pi always-on. If you are worried about the minsicule half a watt the pi consumes destroying the planet, then you wouldn't be running a virgin tivo... There may be ways around this, but its not on my task list.
 
 Again, on the reboot of the Pi, I have noticed it turn the receiver off when it shouldn't after the first selection of Kodi. Turning the receiver on manually fixes this permanently until the next pi reboot. Again I cant see why this is (it is dependent on libCEC version). I hope it all fixes itself if I can end up using a different libCEC in the future. In the meantime, a once in a moon button press is probably not beyond even the most lethargic couch potato.
 
-#Installation:
+# Installation:
 Ensure the pi/pi2/pi3, and virgin box are networked and the virgin box is on a fixed or reserved IP address, and you know it (the IP address that is).
 
 Add the Pulse eight box into the hdmi line from the virgin box to wherever it goes to (TV, receiver whatever)
