@@ -45,7 +45,7 @@ Add the Pulse eight box into the hdmi line from the virgin box to wherever it go
 
 Plug the USB from the Pulse Eight box into a USB port on your raspberry pi, pi2 or pi3.
 
-Download virgintivocec. Also install libcec using
+ssh into the Pi, and download virgintivocec. Also install libcec using
 
     sudo apt-get update
     sudo apt-get install libcec2
@@ -64,7 +64,7 @@ Hard edit what you want your virgin box to be labelled as in main.cpp (default i
 
 Hard edit the CEC address for the Virgin Box (default HDMI port one on the receiver connected to the hdmi port one on the TV. I.e. Physical address 1100. See https://www.mythtv.org/wiki/HDMI-CEC for a bit more description on this.).
 
-Do you use/enable kodi on the pi? Probably. If so go in to kodi, settings, input devices, peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how? I used trial and error).
+Do you use/enable kodi on the pi? Probably. If so go in to kodi, settings, input devices, peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how do you know which? I used trial and error).
 
 Now link libcec
 
