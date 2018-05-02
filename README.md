@@ -6,7 +6,9 @@ For more background see https://github.com/mkulke/cecanyway
 
 # Requires (hardware):
 
-0) Virgin Box and an always-on Raspberry Pi or Pi2 running OSMC (other OS may well work but are untested).
+0) Virgin Tivo Box and an always-on Raspberry Pi or Pi2 running OSMC (other OS may well work but are untested). On a V6 virgin tivo box, go to Help and Settings->Settings->Devices->Network Remote Control, and turn to "Allow". 
+
+Also, not related to virgintivocec, but it is common to have problems piping the V6 via a receiver to a TV, due to an HDCP handshake issue in the V6. The V6 is HDCP2.2. If something on your pipeline is just HDCP1, and you are losing picture, you are likely to need to add an HDCP1 (not HDCP2) rated HDMI splitter into the pipe directly after the virgin box. These cost about a tenner.
 
 1) https://www.pulse-eight.com/
 
@@ -88,9 +90,7 @@ The code is a rehack from cecanyway, licenced under GPL2. (C) 2013 Magnus Kulke.
 
 I've built this originally for OSMC on a Pi2. Now (April 2016) testing for OSMC on a Pi3. Your mileage may vary for other platforms.
 
-I am now (May 2018) testing on a Virgin V6 box. On a V6, go to Help and Settings->Settings->Devices->Network Remote Control, and turn to "Allow". 
-
-Also, not related to virgintivocec, but it is common to have problems piping the V6 via a receiver to a TV, due to an HDCP handshake fault in the V6. The V6 is HDCP2. If something on your pipeline is just HDCP1, and you are losing picture, you are likely to need to add an HDCP1 rated HDMI splitter into the pipe directly after the virgin box.
+I am now (May 2018) testing on a Virgin V6 box. 
 
 Thanks also to Adrian Callaghan for http://adriancallaghan.co.uk/remote-controlling-tivo
 
