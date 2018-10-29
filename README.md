@@ -29,6 +29,8 @@ If you have a Pi kicking around and are willing to spend out on the Pulse Eight 
 
 TV receives remote signal. Pumps signal to Pulse Eight box, which sends it via USB to PI which decodes that input to port control signals for the tivo and sends it to the tivo over the network, which then responds to the keypress.
 
+Note this happens quick and seamlessly: you won't notice it is any different from the virgin box being CEC controlled.
+
 # Caveats
 This code is the worst piece of hacky code ever. But it does achieve this goal (though no promises are made), and it works without any significant problems. I just don't have time to understand all the ins and outs of libCEC, or write proper general purpose code. After all controlling my tivo box via CEC is only worth so much, and I do actually have a life, so I am afraid hacking this together was as good as it was going to get. But I suspect it will still be useful to one or two ther people out there, so up it goes.
 
@@ -85,13 +87,14 @@ Then compile and install virgintivocec
 
 All being well that should kick off the virgintivocec service. A reboot of the pi/pi2/pi3 and you should be away.
 
+
 # Thanks
 The code is a rehack from cecanyway, licenced under GPL2. (C) 2013 Magnus Kulke. 
 
 I've built this originally for OSMC on a Pi2. Now (April 2016) testing for OSMC on a Pi3. Your mileage may vary for other platforms.
 
-I am now (May 2018) testing on a Virgin V6 box. 
+I am now (from May 2018) testing on a Virgin V6 box. There have been no problems with getting this working for V6.
 
 Thanks also to Adrian Callaghan for http://adriancallaghan.co.uk/remote-controlling-tivo
 
-Tested and works on OSMC November 2015 build through to March 2018 build.
+Tested and works on OSMC November 2015 build through to September 2018 build.
