@@ -97,4 +97,4 @@ I am now (from May 2018) testing on a Virgin V6 box. There have been no problems
 
 Thanks also to Adrian Callaghan for http://adriancallaghan.co.uk/remote-controlling-tivo
 
-Tested and works on OSMC November 2015 build through to September 2018 build.
+Tested and works on OSMC November 2015 build through to December 2019 build.
