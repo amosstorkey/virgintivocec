@@ -42,6 +42,8 @@ Sometimes if you reboot the pi, the virign box no longer provides a telly signal
 
 Again, on the reboot of the Pi, I have noticed it turn the receiver off when it shouldn't after the first selection of Kodi. Turning the receiver on manually fixes this permanently until the next pi reboot. Again I cant see why this is (it is dependent on libCEC version). I hope it all fixes itself if I can end up using a different libCEC in the future. In the meantime, a once in a moon button press is probably not beyond even the most lethargic couch potato.
 
+Neither of these issues have been continuing issues for me since I upgraded to a V6 box.
+
 # Installation:
 Ensure the pi/pi2/pi3, and virgin box are networked and the virgin box is on a fixed or reserved IP address, and you know it (the IP address that is).
 
