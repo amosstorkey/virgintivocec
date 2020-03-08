@@ -58,21 +58,22 @@ Install osmc onto your Pi: https://osmc.tv/. Ensure ssh is enabled (it is by def
 ssh into the Pi at the given IP address (ssh osmc@xxx.xxx.xxx.xxx).
 
 Do
+
     sudo apt-get update
     sudo apt-get install git
     sudo apt-get install libcec4
 
 Make a directory (e.g. git), cd into it and do
 
- git clone https://github.com/amosstorkey/virgintivocec.git
+    git clone https://github.com/amosstorkey/virgintivocec.git
  
 Make a directory (e.g. src), cd into it and copy across virgintivocec. E.g.
 
-cp -r ../git/virgintivocec/virgintivocec-master .
+    cp -r ../git/virgintivocec/virgintivocec-master .
 
 Then cd into it:
 
-cd virgintivocec-master
+    cd virgintivocec-master
 
 Now you will need to go into your router and find the IP address for the virgin box. You should make sure it is on an allocated IP address so that it doesn't change.
 
@@ -87,10 +88,12 @@ Do you use/enable kodi on the pi? Probably. If so go in to kodi, settings->input
 Finally we compile and install virgintivocec.
 
 You might wanto to ensure you have done a system upgrade first, but this is not entirely necessary.    
+
     sudo apt-get update
     sudo apt-get dist-upgrade 
 
 To install, do:
+
     sudo apt-get update
     sudo apt-get install make g++
     make
