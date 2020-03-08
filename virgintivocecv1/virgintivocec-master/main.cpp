@@ -1,7 +1,7 @@
 /*
  * VirginTivoCec
  *
- * Copyright Amos Storkey 2015-2020 a.j.storkey@ed.ac.uk 
+ * Copyright Amos Storkey 2015 a.j.storkey@ed.ac.uk 
  *
  * Based on cecanway Magnus Kulke, used under GNU GP Licence 2 or later.
  *
@@ -19,11 +19,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
- * 
  */
-
-// Updated for libCec4.
-  
 
 #include "libcec/cec.h"
 #include <cstdio>
@@ -100,9 +96,8 @@ void populateKeyMapDefault()
   virginMap[CEC_USER_CONTROL_CODE_AN_CHANNELS_LIST] = "IRCODE TIVO\r\n";
 }
 
-void CecCommandCB(void*, const cec_command* commandptr)
+int CecCommandCB(void*, const cec_command command)
 {
-  cec_command command = *commandptr;
   cout << "CeC Command" << endl;
   cout << "commandissued " << command.opcode << "versus" << CEC_OPCODE_DECK_CONTROL << " option " << int(command.parameters[0]) << int(CEC_USER_CONTROL_CODE_AN_RETURN) <<endl;
   switch (command.opcode)
@@ -160,9 +155,8 @@ void CecCommandCB(void*, const cec_command* commandptr)
   }
 }
 
-void CecKeyPressCB(void*, const cec_keypress* keyptr)
+int CecKeyPressCB(void*, const cec_keypress key)
 {
-  cec_keypress key = *keyptr;
   cout << "CeCKeyPress" << endl;
   if (key.duration == 0)
   {
@@ -178,6 +172,7 @@ void CecKeyPressCB(void*, const cec_keypress* keyptr)
       cout << "keycode: " << key.keycode << ", virgin command: " << json << endl;
   }
     
+  return 0;
 }
 
 int PressKey(const string json)
@@ -288,8 +283,8 @@ int main (int argc, char* argv[])
   configuration.iHDMIPort  = 1;
   configuration.bActivateSource = 1;
   configuration.iPhysicalAddress = 1100;
-  callbacks.keyPress = &CecKeyPressCB;
-  callbacks.commandReceived = &CecCommandCB;
+  callbacks.CBCecKeyPress = &CecKeyPressCB;
+  callbacks.CBCecCommand = &CecCommandCB;
   configuration.callbacks = &callbacks;
   
   configuration.deviceTypes.Add(CEC_DEVICE_TYPE_RECORDING_DEVICE);
@@ -305,8 +300,8 @@ int main (int argc, char* argv[])
   parser->InitVideoStandalone();
 
   cout << "autodetect serial port: ";
-  cec_adapter_descriptor devices[10];
-  uint8_t iDevicesFound = parser->DetectAdapters(devices, 10, NULL,0);
+  cec_adapter devices[10];
+  uint8_t iDevicesFound = parser->FindAdapters(devices, 10, NULL);
   if (iDevicesFound <= 0)
   {
     cout << "FAILED" << endl;
@@ -315,7 +310,7 @@ int main (int argc, char* argv[])
   }
   else
   {
-    port = devices[0].strComName;
+    port = devices[0].comm;
     cout << port << endl;
   }
 
