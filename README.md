@@ -67,7 +67,7 @@ Make a directory (e.g. git), cd into it and do
 
     git clone https://github.com/amosstorkey/virgintivocec.git
  
-Make a directory (e.g. src), cd into it and copy across virgintivocec. E.g.
+Cd back out. Make another directory (e.g. src), cd into it and copy across virgintivocec. E.g.
 
     cp -r ../git/virgintivocec/virgintivocec-master .
 
