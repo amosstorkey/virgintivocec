@@ -1,6 +1,8 @@
 # virgin tivo cec
 
-Use your Raspberry Pi to enable CEC Control of your Virgin Tivo box (i.e. control of Virgin box via TV remote). (c) Copyright 2015 Amos Storkey, licenced under GPL2.
+Use your Raspberry Pi to enable CEC Control of your Virgin Tivo box (i.e. control of Virgin box via TV remote). (c) Copyright 2015-2020 Amos Storkey, licenced under GPL2.
+
+Updated to use libcec4.
 
 For more background see https://github.com/mkulke/cecanyway
 
@@ -51,18 +53,28 @@ Add the Pulse eight box into the hdmi line from the virgin box to wherever it go
 
 Plug the USB from the Pulse Eight box into a USB port on your raspberry pi, pi2 or pi3.
 
-ssh into the Pi, and download virgintivocec. Also install libcec using
+Install osmc onto your Pi: https://osmc.tv/. Ensure ssh is enabled (it is by default - default username osmc, password osmc). Check the IP address in settings->system info in Kodi on the osmc.
 
+ssh into the Pi at the given IP address (ssh osmc@xxx.xxx.xxx.xxx).
+
+Do
     sudo apt-get update
-    sudo apt-get install libcec2
+    sudo apt-get install git
+    sudo apt-get install libcec4
 
-We also need the headers for the libcec 2.1.4. This is best downloaded into the virgintivocec directory from
+Make a directory (e.g. git), cd into it and do
 
-    wget --no-check-certificate https://github.com/Pulse-Eight/libcec/archive/libcec-2.1.4.tar.gz
+ git clone https://github.com/amosstorkey/virgintivocec.git
+ 
+Make a directory (e.g. src), cd into it and copy across virgintivocec. E.g.
 
-and upacked using
+cp -r ../git/virgintivocec/virgintivocec-master .
 
-    tar -xvf libcec-2.1.4.tar.gz
+Then cd into it:
+
+cd virgintivocec-master
+
+Now you will need to go into your router and find the IP address for the virgin box. You should make sure it is on an allocated IP address so that it doesn't change.
 
 Hard edit the IP address for the virgin box in main.cpp (default is 192.168.0.16  - told you it was hacky).
 
@@ -70,17 +82,16 @@ Hard edit what you want your virgin box to be labelled as in main.cpp (default i
 
 Hard edit the CEC address for the Virgin Box (default HDMI port one on the receiver connected to the hdmi port one on the TV. I.e. Physical address 1100. See https://www.mythtv.org/wiki/HDMI-CEC for a bit more description on this.).
 
-Do you use/enable kodi on the pi? Probably. If so go in to kodi, settings, input devices, peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how do you know which? I used trial and error).
+Do you use/enable kodi on the pi? Probably. If so go in to kodi, settings->input devices->peripherals and you will now see two cec controllers. Disable the one corresponding to the Pulse Eight box (how do you know which? I used trial and error, but it is probably the one with a long firmware version).
 
-Now link libcec
+Finally we compile and install virgintivocec.
 
-    cd virgintivocec/virgintivocec-master
-    ln -s ../libcec-libcec-2.1.4/include libcec
-
-Then compile and install virgintivocec   
-
+You might wanto to ensure you have done a system upgrade first, but this is not entirely necessary.    
     sudo apt-get update
-    sudo apt-get dist-upgrade
+    sudo apt-get dist-upgrade 
+
+To install, do:
+    sudo apt-get update
     sudo apt-get install make g++
     make
     sudo make install
