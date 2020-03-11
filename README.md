@@ -87,7 +87,7 @@ Do you use/enable kodi on the pi? Probably. If so go in to kodi, settings->input
 
 Finally we compile and install virgintivocec.
 
-You might wanto to ensure you have done a system upgrade first, but this is not entirely necessary.    
+You might want to to ensure you have done a system upgrade first, but this is not entirely necessary.    
 
     sudo apt-get update
     sudo apt-get dist-upgrade 
