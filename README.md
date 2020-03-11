@@ -101,8 +101,9 @@ To install, do:
     sudo update-rc.d virgintivocec defaults
     sudo service virgintivocec start
 
-All being well that should kick off the virgintivocec service. A reboot of the pi/pi2/pi3 and you should be away.
+If you have a V6, don't forget to set (on the V6 box) Settings->Settings->Devices->Network Remote Control to "Allow".
 
+All being well that should kick off the virgintivocec service. A reboot of the pi/pi2/pi3 and you should be away.
 
 # Thanks
 The code is a rehack from cecanyway, licenced under GPL2. (C) 2013 Magnus Kulke. 
