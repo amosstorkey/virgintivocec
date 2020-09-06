@@ -2,7 +2,7 @@
 
 Use your Raspberry Pi to enable CEC Control of your Virgin Tivo box (i.e. control of Virgin box via TV remote). (c) Copyright 2015-2020 Amos Storkey, licenced under GPL2.
 
-Updated to use libcec4.
+Updated to use libcec4 (virgintivocec-master - virgintivocec1 is the libcec3 version).
 
 For more background see https://github.com/mkulke/cecanyway
 
