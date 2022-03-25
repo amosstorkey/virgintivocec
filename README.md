@@ -8,7 +8,7 @@ For more background see https://github.com/mkulke/cecanyway
 
 # Requires (hardware):
 
-0) Virgin Tivo Box or V6 box and an always-on Raspberry Pi or Pi2 running OSMC (other OS may well work but are untested). On a V6 virgin tivo box, go to Help and Settings->Settings->Devices->Network Remote Control, and turn to "Allow". 
+0) Virgin Tivo Box or V6 box and an always-on Raspberry Pi, Pi2 or Pi3 (Pi4 not tested) running OSMC (other OS may well work but are untested). On a V6 virgin tivo box, go to Help and Settings->Settings->Devices->Network Remote Control, and turn to "Allow". 
 
 Also, not related to virgintivocec, but it is common to have problems piping the V6 via a receiver to a TV, due to an HDCP handshake issue in the V6. The V6 is HDCP2.2. If something on your pipeline is just HDCP1, and you are losing picture, you are likely to need to add an HDCP1 (not HDCP2) rated HDMI splitter into the pipe directly after the virgin box. These cost about a tenner.
 
@@ -23,7 +23,7 @@ Pulse Eight USB-CEC Adapter at 30 quid. About the same as you'd save on a cheapo
 # Use Cases
 Case 1) You use an osmc pi but have a virgin tivo box. But virgin is not CEC compatible and so your osmc is constantly grabbing attention from it when you turn on the TV, which is a real pain. This adds a CEC capability to the TIVO so this no longer happens.
 
-Case 2) You want to control the virgin box using the TV remote. But you can't, because virgin were cheapskates (just joking VM) and didn't include any CEC hardware on their tivo box. So you're stuffed...
+Case 2) You want to control the virgin box using the TV remote. But you can't, because virgin were cheapskates and didn't include any CEC hardware on their tivo box. So you're stuffed...
 
 except...
 
@@ -114,4 +114,4 @@ I am now (from May 2018) testing on a Virgin V6 box. There have been no problems
 
 Thanks also to Adrian Callaghan for http://adriancallaghan.co.uk/remote-controlling-tivo
 
-Tested and works on OSMC November 2015 build through to November 2020 build. OSMC is making big changes for the next build (July 2021?), so we'll see how it holds out.
+Tested and works on OSMC November 2015 build through to February 2022 build.
